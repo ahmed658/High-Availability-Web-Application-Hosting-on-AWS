@@ -4,14 +4,15 @@ This document outlines the architecture for a scalable, resilient, and highly av
 
 ## **Table of Contents**
 
-1. [Architecture Overview]
-2. [Key Components]
-3. [Workflow & Traffic Flow]
-4. [Core Features]
-5. [Network Configuration]
+1. [Architecture Overview](#architecture-overview)
+2. [Key Components](#key-components)
+3. [Workflow & Traffic Flow](#workflow--traffic-flow)
+4. [Core Features](#core-features)
+5. [Network Configuration](#network-configuration)
 
-## **Architecture Overview** 
-**![Architecture Diagram][./images/architecture-diagram.png]**
+## **Architecture Overview**
+
+![Architecture Diagram](./images/architecture-diagram.png)
 
 The architecture is designed to provide a robust environment for a web application by distributing resources across two Availability Zones (AZs) within a single Virtual Private Cloud (VPC). This multi-AZ setup is fundamental to achieving high availability, as it protects the application from failure in a single data center.  
 Traffic is intelligently routed and balanced across healthy application servers, which can scale automatically based on demand. The database is also configured for high availability with a primary instance and a synchronous standby replica in a separate AZ. Monitoring and alerting are handled by CloudWatch and SNS to ensure operational visibility.
